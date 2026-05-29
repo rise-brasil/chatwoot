@@ -29,11 +29,11 @@ export function useCaptain() {
 
   // === Feature Flags ===
   const captainEnabled = computed(() => {
-    return isCloudFeatureEnabled(FEATURE_FLAGS.CAPTAIN);
+    return false;
   });
 
   const captainTasksEnabled = computed(() => {
-    return isCloudFeatureEnabled(FEATURE_FLAGS.CAPTAIN_TASKS);
+    return false;
   });
 
   // === Limits (Enterprise) ===

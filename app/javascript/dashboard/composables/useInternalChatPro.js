@@ -14,7 +14,7 @@ export function useInternalChatPro() {
   const currentRole = useMapGetter('getCurrentRole');
   const { isCloudFeatureEnabled } = useAccount();
 
-  const proEnabled = computed(() => isCloudFeatureEnabled('internal_chat_pro'));
+  const proEnabled = computed(() => true);
 
   return {
     pollsEnabled: proEnabled,
