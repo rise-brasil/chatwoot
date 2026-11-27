@@ -12,6 +12,9 @@ services:
       redis:
         condition: service_healthy
     environment:
+      # Ties SERVICE_URL_RAILS to this service's Domains in Coolify and routes them to port 3000.
+      # Without it Coolify stores the first generated sslip.io URL and never follows the domain.
+      - SERVICE_URL_RAILS_3000
       - NODE_ENV=production
       - RAILS_ENV=production
       - INSTALLATION_ENV=docker
